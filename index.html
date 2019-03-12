@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fifi's cake world</title>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div id="header"></div>
+<div id="nav">
+<a href="index.html">Home</a><a href="aboutus.html">AboutUs</a><img src="fifilogo.png" align="middle"><a href="order.html">Order</a><a href="contactus.html">Contact</a>
+</div><br><br>
+<div id="content1" >
+<div class="slideshow-container"style="padding-left:35%">
+  <div class="mySlides fade">
+    <img src="cake4.jpg" style="width:auto;height:auto">
+  </div>
+  <div class="mySlides fade">
+    <img src="cake5.jpg" style="width:auto;height:auto">
+  </div>
+  <div class="mySlides fade">
+    <img src="cake6.jpg" style="width:auto;height:auto">
+  </div>
+   <div class="mySlides fade">
+    <img src="cake7.jpg" style="width:auto;height:auto">
+  </div>
+   <div class="mySlides fade">
+    <img src="cake8.jpg" style="width:auto;height:auto">
+  </div>
+  <div class="mySlides fade">
+    <img src="cake9.jpg" style="width:auto;height:auto">
+  </div>
+  <div class="mySlides fade">
+    <img src="cake10.jpg" style="width:auto;height:auto">
+  </div>
+  <div class="mySlides fade">
+    <img src="cake11.jpg" style="width:auto;height:auto">
+  </div>
+  </div>
+<div id="content2">
+ <p> <b>Welcome to Fifi's Cake Land - a sweet source for seasonal recipes and tasty cakes to order for your little Ken and Cutie-pie for their special day</b></p>
+<p>Whether you're looking to order a celebration cake for a chocolate-loving princess or playful prince - or both - you'll find it here!</p>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1} 
+  slides[slideIndex-1].style.display = "block"; 
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+
+</div><br><br>
+<div id="footer" style="text-align:center;padding:50px">Copyright &copy reserved,Fifi's cake land<br></div>
+</body>
+</html>

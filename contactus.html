@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fifi's cake world</title>
+<link href="style.css" rel="stylesheet">
+<style>
+form{
+  border:20px;
+  background-image:url(bgf.jpg);
+  margin:0% 25% 0% 25%;
+  padding:5%;
+}
+</style>
+<script>
+function formValidate()
+{
+  var uname=document.registration.username;
+  if(all letter(uname))
+  {
+  }
+  return false;
+}
+function all letter(uname)
+{
+  var letters=/^[A-Za-z]+$/;
+  if (uname.value.match(letters))
+  {
+    return true;
+  }
+  else
+  {
+    alert('username must have only letters');
+	uname.focus();
+	return false;
+  }
+}
+</script>
+</head>
+<body>
+<div id="header"></div>
+<div id="nav">
+<a href="index.html">Home</a><a href="aboutus.html">AboutUs</a><img src="fifilogo.png" align="middle"><a href="order.html">Order</a><a href="contactus.html">Contact</a>
+</div><br><br>
+<p style="text-align:center;font-weight:bold;font-family:times new roman;font-size:30px">CONTACT US</p>
+<p style="font-family:times new roman;font-size:25px;text-align:center">Kindly Fill The Form With Proper Information.<br>We Will Reach You As Soon As Possible.</p>
+<div id="c3">
+<form name="f1" onsubmit="return formValidate()">
+Name
+<input type="text" name="fname" placeholder="Full Name" required><br>
+Email
+<input type="email" name="Email" placeholder="email@.com" required><br>
+Message
+<textarea type="text" name="message" placeholder="Share your feeling with us."></textarea><br><br><br>
+<input type="submit" name="submit">
+</form>
+</div><br><br>
+<div id="footer" style="text-align:center;padding:50px">Copyright &copy reserved,Fifi's cake land<br></div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fifi's cake world</title>
+<link href="style.css" rel="stylesheet">
+<style>
+form{
+  border:20px;
+  background-image:url(bgf.jpg);
+ margin:0% 25% 0% 25%;
+  padding:5%;
+}
+</style>
+<script>
+function formValidate()
+{
+  var uname=/^[A-Za-z]{20}$/;
+  if(f2.user.value.match(uname))
+  {
+  alert("SUCCESS");
+  return true;
+  }
+  else
+  {
+  alert("Re-enter the details");
+  return false;
+  }
+  var email=/^\w+([\._]?\w+)*@\w+([\._]?\w+)*(\.\w{2,3})+$/;
+  if(f2.user.value.match(email))
+  {
+  alert("SUCCESS");
+  return true;
+  }
+  else
+  {
+  alert("Re-enter the details");
+  return false;
+  }
+}
+</script>
+</head>
+<body onload="document.f2.name.focus()">
+<div id="header"></div>
+<div id="nav">
+<a href="index.html">Home</a><a href="aboutus.html">AboutUs</a><img src="fifilogo.png" align="middle"><a href="order.html">Order</a><a href="contactus.html">Contact</a>
+</div><br><br>
+<div id="c3">
+<form name="f2" onsubmit="return formValidate()">
+NAME:
+<input type="text" name="name" title="Enter your Name" placeholder="Full Name" required><br>
+CONTACT:
+<input type="text" name="no" pattern="[0-9]{10}" title="Enter a 10 digit Mobile Number" placeholder="Contact Number" required><br>
+EMAIL:
+<input type="email" name="mail" placeholder="Email Address"><br>
+ADDRESS:
+<textarea type="text" name="add" placeholder="Home Address"></textarea><br>
+QUANTITY:<br>
+<select name="quant" size="1" title="Select One" style="width:100px;height:50px">
+<option value="num1">1 nos</option>
+<option value="num2">2 nos</option>
+<option value="num3">3 nos</option>
+<option value="num4">4 nos</option>
+<option value="num5">5 nos</option>
+</select><br><br>
+<input type="submit" name="SEND">
+</form>
+</div><br><br>
+<div id="footer" style="text-align:center;padding:50px">Copyright &copy reserved,Fifi's cake land<br></div>
+</body>
+</html>
